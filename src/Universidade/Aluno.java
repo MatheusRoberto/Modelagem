@@ -53,11 +53,13 @@ public abstract class Aluno {
 		if (a instanceof Formacao) {
 			Formacao formacao = (Formacao) a;
 			if((calcCredito(formacao)) && (calcCoeficiente(formacao)) && (calculaNota(formacao))){
-				
+				return true;
 			}
 			
+		}else{
+			
 		}
-		return true;
+		return false;
 	}
 	
 	private boolean calcCredito(Formacao formacao) {
