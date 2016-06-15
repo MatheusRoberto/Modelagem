@@ -4,17 +4,19 @@ import java.util.*;
 
 public abstract class Aluno {
 
-    public Aluno(String n, Date D, boolean s, String Ra) {
+    public Aluno(String n, Date D, boolean s, String Ra, Endereco e) {
     	setNome(n);
     	setDatadeNascimento(D);
     	setSexo(s);
     	setRA(Ra);
+    	setEndereco(e);
     }
 
     private String Nome;
     private Date DatadeNascimento;
     private Boolean Sexo;
     private String RA;
+    private Endereco endereco;
     
 	protected String getNome() {
 		return Nome;
@@ -39,6 +41,12 @@ public abstract class Aluno {
 	}
 	protected void setRA(String rA) {
 		RA = rA;
+	}
+	protected Endereco getEndereco() {
+		return endereco;
+	}
+	protected void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 }

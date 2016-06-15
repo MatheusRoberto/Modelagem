@@ -4,25 +4,31 @@ import java.util.Date;
 
 public abstract class Formacao extends Aluno{
 
-    public Formacao(String n, Date D, boolean s, String Ra, Historico h) {
-    	super(n, D, s, Ra);
-    	setHistorico(h);
-    	
+    public Formacao(String n, Date D, boolean s, String Ra, Historico h, Curso c, Endereco e) {
+    	super(n, D, s, Ra, e);
+    	setHistorico(h);    	
     }
-    private double Coeficiente;
     private Historico historico;
+    private Curso curso;
+    private Semestre semestre;
     
-	protected double getCoeficiente() {
-		return Coeficiente;
-	}
-	protected void setCoeficiente(double coeficiente) {
-		Coeficiente = coeficiente;
-	}
 	protected Historico getHistorico() {
 		return historico;
 	}
 	protected void setHistorico(Historico historico) {
 		this.historico = historico;
+	}
+	protected Curso getCurso() {
+		return curso;
+	}
+	protected void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+	protected Semestre getSemestre() {
+		return semestre;
+	}
+	protected void setSemestre(Semestre semestre) {
+		this.semestre = semestre;
 	}
 
 }

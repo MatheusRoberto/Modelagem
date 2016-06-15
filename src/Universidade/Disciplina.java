@@ -4,6 +4,13 @@ public class Disciplina {
 
     public Disciplina() {
     }
+    
+    public Disciplina(String n, String e, int credito, int carga){
+    	setNome(n);
+    	setEmenta(e);
+    	setCredito(credito);
+    	setCargaHoraria(carga);
+    }
 
     private String Nome;
     private String Ementa;

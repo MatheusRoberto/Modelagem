@@ -8,6 +8,10 @@ public class Grade {
 
     public Grade() {
     }
+    
+    protected void adicionaMateria(Disciplina d) {
+		grade.add(d);
+	}
 
 	protected ArrayList<Disciplina> getGrade() {
 		return grade;

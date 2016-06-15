@@ -14,7 +14,7 @@ public class Historico {
 		historico.add(new DisciplinaCompletas(d, n));
 	}
     
-    protected int contaCredito() {
+    protected int getCredito() {
     	int total = 0;
 		for (Iterator<DisciplinaCompletas> iterator = historico.iterator(); iterator.hasNext();) {
 			DisciplinaCompletas disciplinaCompletas = (DisciplinaCompletas) iterator.next();
@@ -22,6 +22,17 @@ public class Historico {
 		}
 		return total;
 	}
+    
+    protected double getCoeficiente(){
+    	double media = 0;
+    	for (Iterator<DisciplinaCompletas> iterator = historico.iterator(); iterator.hasNext();) {
+			DisciplinaCompletas disciplinaCompletas = (DisciplinaCompletas) iterator.next();
+			media += (disciplinaCompletas.getNota() * disciplinaCompletas.getDisciplina().getCredito());
+		}
+    	int tcredito = this.getCredito();
+    	return media/tcredito;
+    }
+    
 
 	protected ArrayList<DisciplinaCompletas> getHistorico() {
 		return historico;
